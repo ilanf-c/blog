@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="/blog/lib/animate-css/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"rcore-os.github.io","root":"/blog/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="rcore-os Blog">
+<meta property="og:url" content="http://rcore-os.github.io/blog/page/21/index.html">
+<meta property="og:site_name" content="rcore-os Blog">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="rcore-os Group">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://rcore-os.github.io/blog/page/21/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>rcore-os Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">rcore-os Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">rcore-os Group</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">411</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">415</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content index posts-expand">
+          
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/23/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5Blog-%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5-%E7%BD%97%E5%81%A5%E5%B3%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/04/23/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5Blog-%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5-%E7%BD%97%E5%81%A5%E5%B3%B0/" class="post-title-link" itemprop="url">2024春夏季开源操作系统训练营Blog-第一阶段-罗健峰</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-23 08:02:46" itemprop="dateCreated datePublished" datetime="2024-04-23T08:02:46+00:00">2024-04-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-01 10:15:38" itemprop="dateModified" datetime="2024-11-01T10:15:38+00:00">2024-11-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5/" itemprop="url" rel="index"><span itemprop="name">2024春夏季开源操作系统训练营</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="2024春夏季开源操作系统训练营Blog-第一阶段-罗健峰"><a href="#2024春夏季开源操作系统训练营Blog-第一阶段-罗健峰" class="headerlink" title="2024春夏季开源操作系统训练营Blog-第一阶段-罗健峰"></a>2024春夏季开源操作系统训练营Blog-第一阶段-罗健峰</h1><blockquote>
+<p>一些学习链接：</p>
+<ul>
+<li><a href="https://doc.rust-lang.org/book/" target="_blank" rel="noopener"> Rust 程序设计语言(The Rust Programming Language) </a></li>
+<li><a href="https://course.rs" target="_blank" rel="noopener"> Rust语言圣经(Rust Course) </a></li>
+<li><a href="https://cheats.rs" target="_blank" rel="noopener"> Rust语言小抄(Rust Language Cheat Sheet) </a></li>
+</ul>
+</blockquote>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在21年下半年的时候，当时想着给前端的某个项目赋能，由于前端项目过于臃肿、代码质量不高，导致了不单单是开发还是维护都提出了巨大的工程量，提升前端的编译速度和开发效率的情况迫在眉睫，无意中发现Rust在webassembly领域是有一地之席的、在前端基建方面具有与生俱来的优势。</p>
+<p>所以很单纯的目的就是想利用Rust这门高性能、安全性的语言来提升前端打包的效率。</p>
+<p>目前Rust社区里已经有使用Rust为基础开发的前端打包工具<strong>Turbopack</strong>。</p>
+<p>非常自然的我进入到了Rust这门语言的学习。</p>
+<h2 id="第一阶段总结"><a href="#第一阶段总结" class="headerlink" title="第一阶段总结"></a>第一阶段总结</h2><p>由于Rust，我是有基础的。所以在第一阶段我可能更加注重的是Rust基础的巩固，同时加深使用Rust语言的算法描述。</p>
+<p>学一门语言，除了学习各类语言相同的编程概念外，其中，学习该语言自身的特性和适用场景也是非常重要的。</p>
+<p>Rust作为一门系统级编程语言，采百家之长，自身形成一些Rust语言所特有的语言特性，其中变量的所有权和生命周期就是Rust自身语言特性中最璀璨的一块。</p>
+<p>👇👇👇现在给大家总结和分享一下我在开源操作系统训练营第一阶段的总结。👇👇👇</p>
+<ol>
+<li>思维转换</li>
+<li>所有权和生命周期</li>
+</ol>
+<h3 id="一、思维转换"><a href="#一、思维转换" class="headerlink" title="一、思维转换"></a>一、思维转换</h3><p><strong>在学习Rust的过程中，如果你想从其他语言迁移到Rust，必须要经过一段时期的思维转换（Paradigm Shift）</strong></p>
+<p>从命令式（imperative）编程语言转换到函数式（functional）编程语言、从变量的可变性（mutable）迁移到不可变性（immutable）、从弱类型语言迁移到强类型语言，以及从手工或者自动内存管理到通过生命周期来管理内存，难度是多重叠加。</p>
+<p>而 Rust 中最大的思维转换就是变量的所有权和生命周期，这是几乎所有编程语言都未曾涉及的领域。</p>
+<h3 id="二、掌握Rust基本概念"><a href="#二、掌握Rust基本概念" class="headerlink" title="二、掌握Rust基本概念"></a>二、掌握Rust基本概念</h3><p>只列出我认为学习Rust这门语言的内容和我入手其他语言的经验之谈。</p>
+<p><strong>先把握大体后追踪语言细节</strong>。</p>
+<ol>
+<li>数据类型<ul>
+<li>基本类型、复合类型</li>
+<li><a href="https://cheats.rs/#memory-layout" target="_blank" rel="noopener">数据类型在内存中的布局</a></li>
+</ul>
+</li>
+<li>所有权和借用</li>
+<li>流程控制</li>
+<li>模式匹配</li>
+<li>函数<ul>
+<li>泛型</li>
+<li>特征</li>
+</ul>
+</li>
+<li>包和模块、注释等</li>
+<li>cargo及常用库（tokio、serde等）</li>
+<li>rust项目的工程化（代码规范化、commit规则等）</li>
+</ol>
+<h3 id="三、所有权和生命周期"><a href="#三、所有权和生命周期" class="headerlink" title="三、所有权和生命周期"></a>三、所有权和生命周期</h3><p>Rust这门语言最耀眼的设计就在于变量的所有权机制和生命周期，这也是Rust这门语言我认为最具代表性的特征。</p>
+<p>它带给了Rust语言最本质或者说最核心的点、就是内存的管理。致使使用这门语言的人要有强烈的内存分布和管理内存的能力，<strong>所有权和生命周期是 Rust 和其它编程语言的主要区别，也是 Rust 其它知识点的基础。</strong></p>
+<h4 id="本质上来说所有权和生命周期"><a href="#本质上来说所有权和生命周期" class="headerlink" title="本质上来说所有权和生命周期"></a>本质上来说所有权和生命周期</h4><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> data = <span class="built_in">vec!</span>[<span class="number">10</span>, <span class="number">42</span>, <span class="number">9</span>, <span class="number">8</span>];</span><br><span class="line">    <span class="keyword">let</span> v = <span class="number">42</span>;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> <span class="literal">Some</span>(pos) = find_pos(data, v) &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"Found &#123;&#125; at &#123;&#125;"</span>, v, pos);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">find_pos</span></span>(data: <span class="built_in">Vec</span>&lt;<span class="built_in">u32</span>&gt;, v: <span class="built_in">u32</span>) -&gt; <span class="built_in">Option</span>&lt;<span class="built_in">usize</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">for</span> (pos, item) <span class="keyword">in</span> data.iter().enumerate() &#123;</span><br><span class="line">        <span class="keyword">if</span> *item == v &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">Some</span>(pos);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="literal">None</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>动态数组因为大小在编译期无法确定，所以放在堆上，并且在栈上有一个包含了长度和容量的胖指针指向堆上的内存。</p>
+<p>在调用 find_pos() 时，main() 函数中的局部变量 data 和 v 作为参数传递给了 find_pos()，所以它们会被放在 find_pos() 的参数区。</p>
+<center>
+    <img src="/blog/.io//截图.png" alt="loading error"><br>
+    <span>图1</span>
+</center>
+
+<p>按照大多数编程语言的做法，现在堆上的内存就有了两个引用。不光如此，我们每把 data 作为参数传递一次，堆上的内存就会多一次引用。</p>
+<p>但是，这些引用究竟会做什么操作，我们不得而知，也无从限制；而且堆上的内存究竟什么时候能释放，尤其在多个调用栈引用时，很难厘清，取决于最后一个引用什么时候结束。所以，这样一个看似简单的函数调用，给内存管理带来了极大麻烦。</p>
+<p>对于堆内存多次引用的问题，我们先来看大多数语言的方案：</p>
+<ol>
+<li><p><strong>C/C++要求开发者手工处理</strong>：非常不便。这需要我们在写代码时高度自律，按照前人总结的最佳实践来操作。但人必然会犯错，一个不慎就会导致内存安全问题，要么内存泄露，要么使用已释放内存，导致程序崩溃。</p>
+</li>
+<li><p><strong>Java等语言使用追踪式GC</strong>：通过定期扫描堆上数据还有没有人引用，来替开发者管理堆内存，不失为一种解决之道，但 GC 带来的 STW 问题让语言的使用场景受限，性能损耗也不小。</p>
+</li>
+<li><p><strong>ObjC/Swift使用自动引用计数（ARC）</strong>：在编译时自动添加维护引用计数的代码，减轻开发者维护堆内存的负担。但同样地，它也会有不小的运行时性能损耗。</p>
+</li>
+</ol>
+<p>现存方案都是从管理引用的角度思考的，有各自的弊端。我们回顾刚才梳理的函数调用过程，从源头上看，本质问题是堆上内存会被随意引用，那么换个角度，我们是不是可以限制引用行为本身呢？</p>
+<p>这个想法打开了新的大门，Rust 就是这样另辟蹊径的。</p>
+<p>所以所有权机制规定了以下3点来限制引用。</p>
+<ul>
+<li><strong>一个值只能被一个变量所拥有，这个变量被称为所有者（Each value in Rust has a variable that’s called its owner）。</strong></li>
+<li><strong>一个值同一时刻只能有一个所有者</strong>（There can only be one owner at a time），也就是说不能有两个变量拥有相同的值。所以对应刚才说的变量赋值、参数传递、函数返回等行为，旧的所有者会把值的所有权转移给新的所有者，以便保证单一所有者的约束。</li>
+<li><strong>当所有者离开作用域，其拥有的值被丢弃</strong>（When the owner goes out of scope, the value will be dropped），内存得到释放。</li>
+</ul>
+<p>在这三条所有权规则的约束下，我们看开头的引用问题是如何解决的：</p>
+<center>
+    <img src="/blog/.io//截图2.png" alt="loading error"><br>
+    <span>图2</span>
+</center>
+
+<p>原先 main() 函数中的 data，被移动到 find_pos() 后，就失效了，编译器会保证 main() 函数随后的代码无法访问这个变量，这样，就确保了堆上的内存依旧只有唯一的引用。</p>
+<p>本质上来讲这就是所有权机制所保证的</p>
+<p>其中又牵扯出了<strong>移动（Move）和借用（borrow）、引用（Reference）的规则</strong></p>
+<h5 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h5><p>变量data的所有权被移动给另一个data1了、后续data1的所有权移动到了sum函数中、导致了变量data和data1<br>都被移动、无法使用。</p>
+<p>可以看到，所有权规则，解决了谁真正拥有数据的生杀大权问题，让堆上数据的多重引用不复存在，这是它最大的优势。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> data = <span class="built_in">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">    <span class="keyword">let</span> data1 = data;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"sum of data1: &#123;&#125;"</span>, sum(data1));</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"data1: &#123;:?&#125;"</span>, data1); <span class="comment">// error1</span></span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"sum of data: &#123;&#125;"</span>, sum(data)); <span class="comment">// error2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">sum</span></span>(data: <span class="built_in">Vec</span>&lt;<span class="built_in">u32</span>&gt;) -&gt; <span class="built_in">u32</span> &#123;</span><br><span class="line">    data.iter().fold(<span class="number">0</span>, |acc, x| acc + x)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是，这也会让代码变复杂，尤其是一些只存储在栈上的简单数据，如果要避免所有权转移之后不能访问的情况，我们就需要手动复制，会非常麻烦，效率也不高。</p>
+<p>Rust 考虑到了这一点，提供了两种方案：</p>
+<ol>
+<li><p>如果你不希望值的所有权被转移，在 Move 语义外，Rust 提供了 Copy 语义。如果一个数据结构实现了 Copy trait，那么它就会使用 Copy 语义。这样，在你赋值或者传参时，值会自动按位拷贝（浅拷贝）。</p>
+</li>
+<li><p>如果你不希望值的所有权被转移，又无法使用 Copy 语义，那你可以“借用”数据。</p>
+</li>
+</ol>
+<h5 id="借用和引用"><a href="#借用和引用" class="headerlink" title="借用和引用"></a>借用和引用</h5><p>其实，在 Rust 中，“借用”和“引用”是一个概念，只不过在其他语言中引用的意义和 Rust 不同，所以 Rust 提出了新概念“借用”，便于区分。</p>
+<p>本质上来将就是不希望所有权被转移、又无法使用 Copy 语义。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>打个比方：我拥有一本书，会有以下情况</p>
+<p>我把这本书送给了朋友、那我就丧失了这本书的拥有权(所有权)。</p>
+<p>我把这本书借给了朋友、朋友不拥有这本书、但有借用，可以修改内容（可变的引用），当然我也可以提醒他不要在我的书上做标记（不可变的引用）。</p>
+<p>其中实现Copy trait的语义的意思就是、朋友将这本书拿去复印了、他拥有了复印这本书的所有权、所以我们俩都拥有了不同的所有权。</p>
+<p>当然也会有不同的情况发生，比如说这本书是我们俩一起出钱买的，我们俩都应该拥有这本书的所有权。进而Rust引入Rc、Arc、Cell、RefCell等智能指针来实现一个变量会产生多所有权的情况。</p>
+<h2 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h2><p>第一阶段的基础还是蛮重要、一些使用Rust语言描述的语言细节还是需要多多关注，为我们后面的内容打好基础。</p>
+<p>进一步感谢开源操作系统社区的老师和技术人员，感谢你们辛苦的付出🌾🌾🌾。</p>
+<p>期待第二阶段的学习、展开新的篇章。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/23/abcd1234-rust-os/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/04/23/abcd1234-rust-os/" class="post-title-link" itemprop="url">abcd1234-rust-os</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-23 00:35:51" itemprop="dateCreated datePublished" datetime="2024-04-23T00:35:51+00:00">2024-04-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-01 10:15:38" itemprop="dateModified" datetime="2024-11-01T10:15:38+00:00">2024-11-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/rust-stage-1/" itemprop="url" rel="index"><span itemprop="name">rust-stage-1</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Rust-OS-一阶段学习总结"><a href="#Rust-OS-一阶段学习总结" class="headerlink" title="Rust OS 一阶段学习总结"></a>Rust OS 一阶段学习总结</h1><p>@FinishTime: 2024-04-23 00:35:51</p>
+<h2 id="个人背景概述"><a href="#个人背景概述" class="headerlink" title="个人背景概述"></a>个人背景概述</h2><p>我是一名软件工程专业的大二本科生，曾参与过2023年秋冬季训练营。<br>在去年的训练营中，我学习了rust，但因为第一次学习，且当时需要准备期中考试和各科作业，没有按时通过第一阶段。<br>虽然我后续进入了二阶段群，但没有完成第二阶段的实验部分，今年重新参与，打算认真跟进下去。</p>
+<h2 id="今年一阶段学习时间表"><a href="#今年一阶段学习时间表" class="headerlink" title="今年一阶段学习时间表"></a>今年一阶段学习时间表</h2><ul>
+<li>2024-03-27 重新报名参与活动，并邀请了一名本校大三学长共同进步</li>
+<li>2024-04-07 正式开始参与活动，又邀请了两位同校同学，我开始重新复习rust</li>
+<li>2024-04-12 通过rust圣经复习至基础部分完成，开始进行做题</li>
+<li>2024-04-13 累计做题3小时，做至43题</li>
+<li>2024-04-19 进行到cow指针部分</li>
+<li>2024-04-20 完成前100题</li>
+<li>2024-04-21 完成110题，开始提交</li>
+</ul>
+<h2 id="一阶段学习内容概述"><a href="#一阶段学习内容概述" class="headerlink" title="一阶段学习内容概述"></a>一阶段学习内容概述</h2><p>我按照<a href="https://course.rs/about-book.html" target="_blank" rel="noopener">“rust语言圣经”</a>上的讲解顺序进行学习，分别学习了：</p>
+<ul>
+<li>变量的绑定与解构</li>
+<li>基本类型</li>
+<li>所有权和借用</li>
+<li>复合类型</li>
+<li>流程控制</li>
+<li>模式匹配</li>
+<li>方法</li>
+<li>泛型和特征</li>
+<li>集合类型</li>
+<li>生命周期</li>
+<li>返回值、错误处理</li>
+<li>包和模块</li>
+<li>注释和文档</li>
+<li>格式化输出</li>
+<li>智能指针</li>
+<li>多线程</li>
+<li>闭包与迭代器</li>
+<li>宏编程</li>
+<li>unsafe rust</li>
+</ul>
+<h2 id="问题概述"><a href="#问题概述" class="headerlink" title="问题概述"></a>问题概述</h2><p>在一阶段过程中，我遇到了一定的问题，并尝试进行解决。以下内容是我认为，不是那么“较为基础”的问题。</p>
+<h3 id="2024-04-12-问题：unicode展示"><a href="#2024-04-12-问题：unicode展示" class="headerlink" title="2024-04-12 问题：unicode展示"></a>2024-04-12 问题：unicode展示</h3><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p>在primitive_types2.rs中，注释要求尝试传入unicode字符，来理解rust中的char。<br>但是，我通过<code>https://emojidb.org/rust-emojis</code>这个<a href="https://emojidb.org/rust-emojis" target="_blank" rel="noopener">emojis网址</a>，拿到了一个emoji：☢️，进行测试，却直接编译出错：  </p>
+<img src="/blog/.io//2024/04/23/abcd1234-rust-os/unicode%E9%94%99%E8%AF%AF1.png" class title="unicode编译出错">
+<h4 id="出错代码"><a href="#出错代码" class="headerlink" title="出错代码"></a>出错代码</h4><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// primitive_types2.rs</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Fill in the rest of the line that has code missing! No hints, there's no</span></span><br><span class="line"><span class="comment">// tricks, just get used to typing these :)</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Execute `rustlings hint primitive_types2` or use the `hint` watch subcommand</span></span><br><span class="line"><span class="comment">// for a hint.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="comment">// Characters (`char`)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Note the _single_ quotes, these are different from the double quotes</span></span><br><span class="line">    <span class="comment">// you've been seeing around.</span></span><br><span class="line">    <span class="keyword">let</span> my_first_initial = <span class="string">'C'</span>;</span><br><span class="line">    <span class="keyword">if</span> my_first_initial.is_alphabetic() &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"Alphabetical!"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> my_first_initial.is_numeric() &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"Numerical!"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"Neither alphabetic nor numeric!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> your_character = '☢️'; <span class="comment">// Finish this line like the example! What's your favorite character?</span></span><br><span class="line">    <span class="comment">// Try a letter, try a number, try a special character, try a character</span></span><br><span class="line">    <span class="comment">// from a different language than your own, try an emoji!</span></span><br><span class="line">    <span class="keyword">if</span> your_character.is_alphabetic() &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"Alphabetical!"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> your_character.is_numeric() &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"Numerical!"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"Neither alphabetic nor numeric!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h4><p>我与队伍里的成员们进行了初步的实验和讨论，确定报错的原因是：“☢️”无法被解析成字符，必须被解析成字符串。那么，问题来了，为什么它无法被解析成字符，而其它的unicode码可以被解析成字符？</p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>首先，我们进行了实验，从<a href="https://emojidb.org/rust-emojis" target="_blank" rel="noopener">emojis网站</a>中寻找了其他的emoji字符，发现大部分的emoji竟然都能被解析成字符。那问题就是出在“☢️”这个emoji上。</p>
+<p>我们队内通过查找rust官方的文档，发现，文档中说，unicode码被分为了两大类，一类是UTF-16，一类是UTF-8。<br>那么，这两大类的unicode字符有什么区别？<br>我们通过搜集资料、询问ai等方式，得到：</p>
+<blockquote>
+<p>UTF-16码点在0xD800到0xDFFF的范围内<br>UTF-8码点在0x80到0x10FFFF的范围内<br>如图<img src="/blog/.io//2024/04/23/abcd1234-rust-os/unicode%E9%94%99%E8%AF%AF2.png" class title="询问chat-1"><br>如图<img src="/blog/.io//2024/04/23/abcd1234-rust-os/unicode%E9%94%99%E8%AF%AF3.png" class title="询问chat-2"></p>
+</blockquote>
+<p>我们的总结是：UTF-8是8位的，其由一个字节进行表示，而UTF-16是16位的，其由两个字节进行表示，很可能是因为“☢️”是UTF-16编码，导致其无法被解析成rust里的“字符<code>char</code>”。</p>
+<h3 id="2024-04-12-问题：if内部返回异常"><a href="#2024-04-12-问题：if内部返回异常" class="headerlink" title="2024-04-12 问题：if内部返回异常"></a>2024-04-12 问题：if内部返回异常</h3><h4 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h4><p>在编程的过程中，我意外发现，在if语句内，通过不写分号的方式进行返回，会产生问题，程序无法编译，见下图：  </p>
+<img src="/blog/.io//2024/04/23/abcd1234-rust-os/if%E9%94%99%E8%AF%AF1.png" class title="if条件编译出错">
+
+<h4 id="出错代码-1"><a href="#出错代码-1" class="headerlink" title="出错代码"></a>出错代码</h4><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// structs3.rs</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Structs contain data, but can also have logic. In this exercise we have</span></span><br><span class="line"><span class="comment">// defined the Package struct and we want to test some logic attached to it.</span></span><br><span class="line"><span class="comment">// Make the code compile and the tests pass!</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Execute `rustlings hint structs3` or use the `hint` watch subcommand for a</span></span><br><span class="line"><span class="comment">// hint.</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#[derive(Debug)]</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Package</span></span> &#123;</span><br><span class="line">    sender_country: <span class="built_in">String</span>,</span><br><span class="line">    recipient_country: <span class="built_in">String</span>,</span><br><span class="line">    weight_in_grams: <span class="built_in">i32</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> Package &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">new</span></span>(sender_country: <span class="built_in">String</span>, recipient_country: <span class="built_in">String</span>, weight_in_grams: <span class="built_in">i32</span>) -&gt; Package &#123;</span><br><span class="line">        <span class="keyword">if</span> weight_in_grams &lt;= <span class="number">0</span> &#123;</span><br><span class="line">            <span class="built_in">panic!</span>(<span class="string">"Can not ship a weightless package."</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            Package &#123;</span><br><span class="line">                sender_country,</span><br><span class="line">                recipient_country,</span><br><span class="line">                weight_in_grams,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">is_international</span></span>(&amp;<span class="keyword">self</span>) -&gt; <span class="built_in">bool</span> &#123;</span><br><span class="line">        <span class="comment">// if self.sender_country != self.recipient_country &#123;</span></span><br><span class="line">        <span class="comment">//     return true;</span></span><br><span class="line">        <span class="comment">//     // true // error, 'true' return to the func is_international, not outside</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="comment">// // return false;</span></span><br><span class="line">        <span class="comment">// false // it can pass the compile</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// if self.sender_country == self.recipient_country &#123;</span></span><br><span class="line">        <span class="comment">//     false</span></span><br><span class="line">        <span class="comment">// &#125; else &#123;</span></span><br><span class="line">        <span class="comment">//     true</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">self</span>.sender_country != <span class="keyword">self</span>.recipient_country <span class="comment">// most elegent way</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">get_fees</span></span>(&amp;<span class="keyword">self</span>, cents_per_gram: <span class="built_in">i32</span>) -&gt; <span class="built_in">i32</span> &#123;</span><br><span class="line">        cents_per_gram * <span class="keyword">self</span>.weight_in_grams</span><br><span class="line">        <span class="comment">// Something goes here...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#[cfg(test)]</span></span><br><span class="line"><span class="keyword">mod</span> tests &#123;</span><br><span class="line">    <span class="keyword">use</span> super::*;</span><br><span class="line"></span><br><span class="line">    <span class="meta">#[test]</span></span><br><span class="line">    <span class="meta">#[should_panic]</span></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">fail_creating_weightless_package</span></span>() &#123;</span><br><span class="line">        <span class="keyword">let</span> sender_country = <span class="built_in">String</span>::from(<span class="string">"Spain"</span>);</span><br><span class="line">        <span class="keyword">let</span> recipient_country = <span class="built_in">String</span>::from(<span class="string">"Austria"</span>);</span><br><span class="line"></span><br><span class="line">        Package::new(sender_country, recipient_country, -<span class="number">2210</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">#[test]</span></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">create_international_package</span></span>() &#123;</span><br><span class="line">        <span class="keyword">let</span> sender_country = <span class="built_in">String</span>::from(<span class="string">"Spain"</span>);</span><br><span class="line">        <span class="keyword">let</span> recipient_country = <span class="built_in">String</span>::from(<span class="string">"Russia"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> package = Package::new(sender_country, recipient_country, <span class="number">1200</span>);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">assert!</span>(package.is_international());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">#[test]</span></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">create_local_package</span></span>() &#123;</span><br><span class="line">        <span class="keyword">let</span> sender_country = <span class="built_in">String</span>::from(<span class="string">"Canada"</span>);</span><br><span class="line">        <span class="keyword">let</span> recipient_country = sender_country.clone();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> package = Package::new(sender_country, recipient_country, <span class="number">1200</span>);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">assert!</span>(!package.is_international());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">#[test]</span></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">calculate_transport_fees</span></span>() &#123;</span><br><span class="line">        <span class="keyword">let</span> sender_country = <span class="built_in">String</span>::from(<span class="string">"Spain"</span>);</span><br><span class="line">        <span class="keyword">let</span> recipient_country = <span class="built_in">String</span>::from(<span class="string">"Spain"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> cents_per_gram = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> package = Package::new(sender_country, recipient_country, <span class="number">1500</span>);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">assert_eq!</span>(package.get_fees(cents_per_gram), <span class="number">4500</span>);</span><br><span class="line">        <span class="built_in">assert_eq!</span>(package.get_fees(cents_per_gram * <span class="number">2</span>), <span class="number">9000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="问题分析-1"><a href="#问题分析-1" class="headerlink" title="问题分析"></a>问题分析</h4><p>在遇到这个问题之后，我自己分析不出来为什么会出现这样的错误。于是，我去找队伍里的学长进行咨询。学长在他的教程书里找到了答案。出现这个问题的原因是，rust的但if语句的返回值必然是返回单元<code>()</code>，因此，我不使用return返回true时，破坏了if语句的语法规则，导致出错。具体教程如下：  </p>
+<img src="/blog/.io//2024/04/23/abcd1234-rust-os/if%E9%94%99%E8%AF%AF2.jpg" class title="if条件编译出错-解决">
+
+<h2 id="额外练习"><a href="#额外练习" class="headerlink" title="额外练习"></a>额外练习</h2><p>在第一阶段中，我在我们专业的操作系统实验课程中，使用rust编程，完成了实验内容，具体完成了：</p>
+<ul>
+<li>生产者与消费者问题</li>
+<li>时间片轮转和优先级队列的调度算法</li>
+<li>文件系统的实现</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在第一阶段的学习中，我巩固了我们所掌握的rust基础，并开始学习操作系统相关的知识。在这一部分，我还培养了我的思考能力，深入思考了rust的安全与不安全的地方。同时，通过和群友的交流，我也展开了对更多其它知识点的思考，比如“Copy”、“Clone”特征和“Drop”的冲突之处。<br>最重要的是，我深深意识到：<code>Talk is cheap, show me the code!</code></p>
+<h2 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h2><p>目前，我已经开始了第二阶段部分内容的学习，希望可以顺利的完成第二阶段的所有内容。之后参与到第三阶段的项目中，继续提高自己的能力。</p>
+<h1 id="Rust-rCore-二阶段学习总结"><a href="#Rust-rCore-二阶段学习总结" class="headerlink" title="Rust rCore 二阶段学习总结"></a>Rust rCore 二阶段学习总结</h1><p>@FinishTime: 2024-06-01 01:39</p>
+<h2 id="二阶段学习时间表"><a href="#二阶段学习时间表" class="headerlink" title="二阶段学习时间表"></a>二阶段学习时间表</h2><ul>
+<li>2024-04-29 二阶段rCore正式开始</li>
+<li>2024-05-06 用了一周时间，复习完学校的期中考试内容，并且做各种学校里的作业</li>
+<li>2024-05-10 期中考试完毕，继续写短头课要交的作业</li>
+<li>2024-05-16 完成学校内的作业，共计：计算机网络1篇论文3000字，iOS开发1篇伪大学生学位论文1.8万字，操作系统实验代码与报告6000字，web开发作业，算法分析与设计实验与报告6000字，人机交互作业报告3000字，毛概发言稿3800字</li>
+<li>2024-05-17 rCore的ch3完成</li>
+<li>2024-05-19 官宣二阶段结束，我在大约16：00，完成了ch4，之后一直尝试解决ch5和ch6，最后在晚上23：00，我还没有完成ch6，所以我决定先提交到300分以保证3阶段旁听资格。到23：40左右，我完成了前三部分的提交，获得300分，拿到三阶段旁听资格</li>
+<li>2024-05-20 一天时间，完成了老师留的数学建模的作业</li>
+<li>2024-05-21 继续写rCore的ch6，完成了大部分的核心功能代码，测试时，崩掉</li>
+<li>2024-05-22 两天时间，完成了“工程技术创新方法”的作业报告3000字和汇报ppt</li>
+<li>2024-05-25 完成了web开发的大作业</li>
+<li>2024-05-30 完成了rCore的第400分，也就是说，ch6卡了我差不多一整周时间，最后在万能的群友的帮助下成功了</li>
+<li>2024-05-31 早2：00，完成第500分，剩余一整天时间，完成了前面的所有报告，与本篇记录<h2 id="二阶段学习内容概述"><a href="#二阶段学习内容概述" class="headerlink" title="二阶段学习内容概述"></a>二阶段学习内容概述</h2></li>
+<li>ch1: 理解rCore的代码的运行环境，以及为什么它能够在裸机上运行起来</li>
+<li>ch2: 实现“让rCore可以接收一系列程序”，即，使rCore变成了一个简单的批处理系统</li>
+<li>ch3: 对rCore进行升级，使其变为分时系统</li>
+<li>ch4: 扩充rCore的工作空间，并且提供内存管理</li>
+<li>ch5: 提供进程的相关服务，即允许进程进行新建进程等操作</li>
+<li>ch6: 加入文件系统，使得进程加载与rCore启动进行解耦，并能够增加其它存储设备</li>
+<li>ch7: 增加进程间通信，为rCore引入管道和命令行参数</li>
+<li>ch8: 通过增加线程，使进程解耦，实现rCore对并发的支持，同时提供死锁检测的服务<h2 id="问题复盘（我的吐槽！）"><a href="#问题复盘（我的吐槽！）" class="headerlink" title="问题复盘（我的吐槽！）"></a>问题复盘（我的吐槽！）</h2>通过上面的学习时间表可以看出，我主要花时间的地方在ch4和ch6上。ch4耗时近3天，ch6耗时近7天。<h3 id="ch4干了小3天，最后发现想复杂了"><a href="#ch4干了小3天，最后发现想复杂了" class="headerlink" title="ch4干了小3天，最后发现想复杂了"></a>ch4干了小3天，最后发现想复杂了</h3>其中，ch4我主要在考虑“是应该为os实现地址的映射，还是为task实现地址的映射”。我最开始想到，mmap和munmap的映射应该在os实现，只有os才直接具有对内存空间的全部可见性；而一个task应该只能看到自己的空间，不应该能够看到真实的映射后的空间。即，不应该由task直接调用mmap和munmap。</li>
+</ul>
+<p>我尝试实现了用os跟踪所有的task，记录他们的虚拟空间和真实空间，当task有需要时，由os分配真实的物理空间，并完成映射。但是，这样导致os的复杂度增加，并且我完成的代码无法通过测试。</p>
+<p>我尝试进行了调试，但发现难以判断到底出现了什么问题，所以我只好换用另一种破坏可见性但简单易实现的方法，不需要os再去跟踪所有的task的空间，而是让task直接能够看到自己的真实空间，并且允许task自己执行mmap和munmap。我仅仅把之前为os实现的核心逻辑代码复制粘贴过来，并配置了一些接口，就通过了ci测试。</p>
+<h3 id="ch6卡1周，真是折磨中的折磨"><a href="#ch6卡1周，真是折磨中的折磨" class="headerlink" title="ch6卡1周，真是折磨中的折磨"></a>ch6卡1周，真是折磨中的折磨</h3><p>而在ch6时，我经受了非常大的折磨！平心而论，要求实现的逻辑并不是很复杂，只是需要层层的传递，最后由“easy-fs”进行实际干活即可。但我遇到了两个极为恶心的问题。</p>
+<p>第一是出现了“File is shorter than the first ELf header part”，翻译过来就是，文件比文件描述符还短。我通过调试，发现是在测试“ch5_spawn0”的时候，报了这个错误。我分析，这个问题可能的最直接原因只有三个，要么是文件本身就不存在，要么是该文件没被读取进来，要么是该文件被损坏了。我通过查看测试用例，发现该文件是存在的，那就只可能是该文件没被读进来或者该文件已被损坏。分析概率，我严重怀疑是该文件已被损坏了。毕竟，读入文件的代码只比ch5多了2行，我的ch5已经通过了，况且读入文件的底层实现不是我做的，那很可能不是读入文件的时候出现的问题。最有可能就是我写的“在可以释放内存时进行内存释放”的操作有问题，导致损坏了其他的文件，比如这个文件。</p>
+<p>但是，我翻来覆去的看我的代码，应该是没有问题的，如果它存在问题，那其它涉及释放内存的地方怎么就没事呢？如果是偶然情况，那也不可能我每次进行测试，它都是这里崩溃。我开始怀疑，是不是我其它地方的代码写的有问题？所以我去重新检查我所有的代码，并且感觉没有什么问题。这该怎么办？迫于无奈，我将代码回滚到了初始版本，打算重新写。但就在我重写完成后，执行测试，还是那个问题！</p>
+<p>又经历了一天的苦思冥想，我决定向万能的群友们请教。在群友们的热心帮助下，我隐约找到了解决方案：</p>
+<blockquote>
+<p>如图<img src="/blog/.io//2024/04/23/abcd1234-rust-os/%E8%AF%B7%E6%95%99%E7%BE%A4%E5%8F%8B.png" class title="感谢热心群友们"><br>我按照文档，将easy-fs的cache部分改正，果然就没有这个问题了。</p>
+</blockquote>
+<p>(吐槽：easy-fs的cache关我什么事啊？也没说要改他啊…这个问题卡了我大约3天)</p>
+<p>但是刚刚那个只是第一个问题！还有一个很坑的问题，我在解决上一个之后，又遇到了“IoError”！报错提示为“VitBlock：IoError”，真是奇怪，怎么还出现IoError了？我再次尝试了大量的解决方法，各种寻找可能的问题，但还是不知道原因。但是，我突然发现，在LOG=TRACE或LOG=DEBUG下，我执行测试，居然没有报错！这是为什么？我意识到了一个可能的关键：时间！在使用LOG时，程序的运行时间会变慢！这可能就给os留足了时间，使其能够完成从存储中的加载，就不会引发错误。而不使用LOG时，可能就因为时间过短，导致os来不及完成加载，从而引发IoError。但这是为什么呢？经过分析，我定位到了出错的核心位置，那里我使用的是if let 语句。后续，我将其改成了let之后再进行match，就解决了问题。</p>
+<p>这激起了我的兴趣：通过上述现象，难道说if let是一个异步非阻塞的语句吗？我请教了我的学校里的老师，但老师也不清楚。我尝试在网上找一些能够对其“是否异步”测试的方法，但都没有找到。最后只能暂时放一放，先干3阶段吧。</p>
+<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><p>rCore真是要命，可算过来了。</p>
+<h2 id="展望-1"><a href="#展望-1" class="headerlink" title="展望"></a>展望</h2><p>三阶段，我选择的是项目8，在之前的旁听过程中，老师留了一些作业，因为之前弄rCore，没有管这部分，我会在后续完成这部分。</p>
+<p>明天还有作业要做。。。两科呢</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/23/algorithm-rusts-learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/04/23/algorithm-rusts-learning/" class="post-title-link" itemprop="url">algorithm-rusts-learning</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-23 00:19:47" itemprop="dateCreated datePublished" datetime="2024-04-23T00:19:47+00:00">2024-04-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-01 10:15:38" itemprop="dateModified" datetime="2024-11-01T10:15:38+00:00">2024-11-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>提供的 Rust 代码实现了一个通用的二叉堆，支持最小堆和最大堆的功能。下面是这个实现的核心组成部分的详细解释：</p>
+<ol>
+<li><p><strong>结构定义 (<code>Heap&lt;T&gt;</code>)</strong>：</p>
+<ul>
+<li><code>T: Default</code>：这个约束确保堆中的元素可以被初始化为默认值。这对于确保堆的向量(<code>items</code>)可以在索引0处有一个占位符，简化索引计算非常有用。</li>
+<li><code>count</code>：跟踪堆中的元素数量。</li>
+<li><code>items</code>：一个向量，存储堆元素。堆使用基于1的索引以简化父子计算，索引0保持为虚拟。</li>
+<li><code>comparator</code>：一个函数指针，用于确定元素的排序，允许灵活定义最小堆或最大堆。</li>
+</ul>
+</li>
+<li><p><strong>构造函数 (<code>new(comparator)</code>)</strong>：</p>
+<ul>
+<li>使用提供的比较函数初始化一个空堆，用于元素排序。</li>
+</ul>
+</li>
+<li><p><strong>堆操作</strong>：</p>
+<ul>
+<li><strong>添加元素 (<code>add</code>)</strong>：在堆的末尾插入一个新元素，然后将其向上移动以维护堆属性。这是通过比较添加的元素与其父元素并根据比较函数进行必要的交换来完成的。</li>
+<li><strong>移除根元素 (<code>next</code> in <code>Iterator</code> implementation)</strong>：移除根元素（根据堆的类型是最小或最大），将其替换为堆中的最后一个元素，然后将此元素向下移动以维护堆属性。在此过程中，堆的大小减少一个。</li>
+</ul>
+</li>
+<li><p><strong>辅助函数</strong>：</p>
+<ul>
+<li><code>parent_idx</code>, <code>children_present</code>, <code>left_child_idx</code>, <code>right_child_idx</code>, <code>smallest_child_idx</code>：这些辅助函数用于计算父和子的索引或检查子节点的存在，这对于在添加和删除操作期间导航堆至关重要。</li>
+</ul>
+</li>
+<li><p><strong>类型特定的堆构造器 (<code>MinHeap</code> 和 <code>MaxHeap</code>)</strong>：</p>
+<ul>
+<li>这些是方便的包装器，提供了使用标准比较函数（对于最小堆是 <code>a &lt; b</code>，对于最大堆是 <code>a &gt; b</code>）轻松实例化 <code>Heap&lt;T&gt;</code> 的方法。</li>
+</ul>
+</li>
+<li><p><strong>测试 (<code>tests</code> module)</strong>：</p>
+<ul>
+<li>包含测试来验证堆的功能，包括最小堆和最大堆行为的测试。</li>
+</ul>
+</li>
+</ol>
+<h3 id="关键特点："><a href="#关键特点：" class="headerlink" title="关键特点："></a>关键特点：</h3><ul>
+<li><strong>通用性和可重用性</strong>：堆可以处理实现了 <code>Default</code> 的任何类型 <code>T</code>，并可以使用在实例化时传递的任何比较函数，使其可以适应不同的排序需求。</li>
+<li><strong>效率</strong>：插入和删除操作的时间复杂度为元素数量的对数，这是二叉堆的特点。</li>
+<li><strong>迭代器集成</strong>：通过实现带有 <code>next</code> 方法的 <code>Iterator</code> 特质，允许堆在标凈 Rust 习惯用法中使用，如循环和其他基于迭代器的操作。</li>
+</ul>
+<h3 id="增强建议："><a href="#增强建议：" class="headerlink" title="增强建议："></a>增强建议：</h3><ul>
+<li><strong>错误处理</strong>：考虑可能失败的场景，如尝试从空堆中移除元素，并优雅地处理</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/23/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5Blog-%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/04/23/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5Blog-%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5/" class="post-title-link" itemprop="url">2024春夏季开源操作系统训练营Blog-第一阶段</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-23 00:04:51" itemprop="dateCreated datePublished" datetime="2024-04-23T00:04:51+00:00">2024-04-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-01 10:15:38" itemprop="dateModified" datetime="2024-11-01T10:15:38+00:00">2024-11-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5/" itemprop="url" rel="index"><span itemprop="name">2024春夏季开源操作系统训练营</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因为之前学C++结识的好友群中发了这个训练营的报名链接，想着正好OS还没有学就想着报名参加了:)。参加本次训练营之前只有csapp的计算机体系结构这一相关经验，对于Rust和RISC-V一无所知。编程能力上，主要是C++的服务器开发，做过几个分布式微服务项目，国外的一些公开课lab（CS144/CS106B/CS50等）。</p>
+<p>总体来说第一阶段学习过程还是有点痛苦的，毕竟Rust学习曲线比较陡峭，不过也有许多特性能与C++等语言联系起来，帮助理解。在报名之后就开始翻阅先前训练营的资料开始自学Rust了，总体还是顺利的</p>
+<h2 id="一些链接🔗"><a href="#一些链接🔗" class="headerlink" title="一些链接🔗"></a>一些链接🔗</h2><ul>
+<li>Rust学习记录：<a href="https://github.com/Andrew211vibe/Rust-Course-Note" target="_blank" rel="noopener">https://github.com/Andrew211vibe/Rust-Course-Note</a></li>
+<li>rCore-Tutorial学习实现：<a href="https://github.com/Andrew211vibe/rCore-Lab" target="_blank" rel="noopener">https://github.com/Andrew211vibe/rCore-Lab</a></li>
+<li>Writing an OS in Rust实现：<a href="https://github.com/Andrew211vibe/blog_os_impl.git" target="_blank" rel="noopener">https://github.com/Andrew211vibe/blog_os_impl.git</a></li>
+<li>个人学习笔记：<a href="https://andrew211vibe.notion.site/2024-850ebd79bde0444f985e7c3c816f501f" target="_blank" rel="noopener">2024开源操作系统训练营 (notion.site)</a></li>
+</ul>
+<h1 id="第一阶段总结"><a href="#第一阶段总结" class="headerlink" title="第一阶段总结"></a>第一阶段总结</h1><p>第一阶段主要集中于Rust基础语法的学习，并完成rustlings练习题，其次是进行RISC-V指令集的学习</p>
+<ul>
+<li>Rust因为是第一次上手，编码熟练度还不是很高，对于一些编码更高效的方式应用不熟练，算法和数据结构的实现遇到的磕绊较多</li>
+<li>RISC-V基本指令比较好理解，实际编写还是差一些，能反应指令的行为，一些寄存器记不住</li>
+<li>计组和编译原理知识比较薄弱</li>
+</ul>
+<h2 id="Rust"><a href="#Rust" class="headerlink" title="Rust"></a>Rust</h2><p>Rust学习过程主要参考阅读了《Rust圣经》、《Rust by Example》、和<a href="https://tourofrust.com/05_zh-cn.html" target="_blank" rel="noopener">Rust之旅</a><br>之后的时间主要是对《Rust圣经》中的进阶部分和基础部分进行阅读笔记并复习，基础部分难点主要集中在所有权和特征这两个知识点上，对于生命周期以及包和模块的讨论并不是特别深入。进阶部分都难哈哈哈哈，迭代器和智能指针还算比较好理解些，对于迭代器加闭包实现的函数式编程每次都让我觉得很强大，Cell和RefCell提供的内部可变性加上智能指针也给程序提供了很大的灵活性的前提下保证了一定的安全性。生命周期的使用也是一大难点了。之后还有unsafe Rust的使用以及宏编程（对比C/C++的难的多但功能性也更强大）</p>
+<p>rustlings的基础语法部分不算特别难，不熟练的查一查就能写得出来。难点集中在test和algorithm章节，主要是test后半部分，一些环境变量的设置，以及rust实现数据结构算法所用到的unsafe rust和智能指针的操作。</p>
+<p>之后尝试阅读Learning Rust With Entirely Too Many Linked Lists，和用Rust实现一些算法和数据结构来巩固，多敲一些代码提高熟练度，多查文档。</p>
+<h2 id="RISC-V学习"><a href="#RISC-V学习" class="headerlink" title="RISC-V学习"></a>RISC-V学习</h2><p>这部分知识学习首先是阅读了《计算机组成于设计：RISC-V版》的前两个章节，对RISC-V的基本指令和指令格式有一个了解，以及RISC-V的设计和计算机体系结构的8个伟大思想之间的联系。之前阅读csapp并完成lab实验，有些x86_64的经验，对于一些基本指令和作用的理解还算轻松。难点集中在原子指令上。之后主要阅读了《RISC-V手册》，主要重点是第十章的特权架构，涉及之后rCore的特权级切换操作以及虚拟内存的实现（SV39多级页表）</p>
+<p>学习后可以看出RISC-V指令集的强大和简单，和x86_64不同的理念。六种基本指令格式，等长指令就能搞定一切，精妙的设计（就是有时候脑子转不过来）</p>
+<h2 id="查缺补漏"><a href="#查缺补漏" class="headerlink" title="查缺补漏"></a>查缺补漏</h2><p>阅读操作系统导论，目前还在虚拟化部分，然后观看导学阶段的OS课录播，补足操作系统的理论知识和概念</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/23/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5Blog-%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/04/23/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5Blog-%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/" class="post-title-link" itemprop="url">2024春夏季开源操作系统训练营Blog-第二阶段</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-23 00:04:51" itemprop="dateCreated datePublished" datetime="2024-04-23T00:04:51+00:00">2024-04-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-01 10:15:38" itemprop="dateModified" datetime="2024-11-01T10:15:38+00:00">2024-11-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/2024%E6%98%A5%E5%A4%8F%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5/" itemprop="url" rel="index"><span itemprop="name">2024春夏季开源操作系统训练营</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>经过第一阶段的Rust练习和RISC-V语法的入门阅读，进入第二阶段，完成rCore的五个实验。第二阶段主要是进行操作系统的学习，并通过实验具象操作系统概念的实现。同时也在跟着Writing an OS in Rust写blog_os作为补充。</p>
+<h1 id="一些链接🔗"><a href="#一些链接🔗" class="headerlink" title="一些链接🔗"></a>一些链接🔗</h1><ul>
+<li>rCore-Tutorial学习实现：<a href="https://github.com/Andrew211vibe/rCore-Lab" target="_blank" rel="noopener">https://github.com/Andrew211vibe/rCore-Lab</a></li>
+<li>Writing an OS in Rust实现：<a href="https://github.com/Andrew211vibe/blog_os_impl.git" target="_blank" rel="noopener">https://github.com/Andrew211vibe/blog_os_impl.git</a></li>
+<li>个人学习笔记：<a href="https://andrew211vibe.notion.site/2024-850ebd79bde0444f985e7c3c816f501f" target="_blank" rel="noopener">2024开源操作系统训练营 (notion.site)</a></li>
+</ul>
+<h1 id="第二阶段总结"><a href="#第二阶段总结" class="headerlink" title="第二阶段总结"></a>第二阶段总结</h1><p>整体rCore实验难度集中在最后三个实验中，第一二章节引入简单操作系统的架构，从裸机平台构建libOS，将整个OS作为一个库给用户使用，到加入特权级切换，让操作系统找到任务并运行实现批处理OS，第三章加入yield系统调用支持多道程序，并加入时钟中断实现抢占式多任务构成多道程序与分时多任务系统。第四章开启地址空间，进一步完善了OS的安全性，应用不再有直接访问物理内存的能力，并且只能通过虚拟地址读写自己的地址空间，无法访问破坏其它应用的地址空间，同时也给操作系统提供内存管理的灵活性，通过分页机制更好地管理物理页帧，页表管理虚拟地址到物理页帧的映射转换。第五章进一步强化任务的概念为进程，加入一个简单的shell，使得用户与操作系统之间的交互能力提高，可以动态地执行应用。第六章实现了一个easyfs文件系统，对操作系统提供持久化存储。第七章通过文件系统的支持建立进程间通信，让不同应用组合在一起运行。第八章引入线程和并发的概念，让操作系统从宏观层面实现多个应用的并发执行，实现内核态管理用户态运行的线程，并支持互斥锁、信号量和条件变量这三种资源。</p>
+<p>由于提早完成了第一阶段任务，得以提前开始第二阶段，前面通过阅读文档并复现代码熟悉整体架构，第二阶段正式开始后完成实验。</p>
+<ul>
+<li>lab1就是简单实现获取当前执行任务的信息，为了维护系统调用次数需要为每个任务维护一个数据结构用以记录，在每次调用之前通过syscall_id查询自增。执行时间单位是ms，初始化为任务第一次调度的时间。</li>
+<li>lab2因为地址空间的引入，首先是对先前的get_time和get_taskinfo接口进行修改以支持虚拟地址，实际就将用户传递的虚拟地址转换为对应的物理地址即可访问修改，不过需要注意可能会被分成两页。之后需要实现mmap和munmap接口，对虚拟内存的申请和释放，主要需要注意判断和处理可能错误，以及释放虚拟内存的步骤实现。</li>
+<li>lab3首先需要实现spawn接口，实际就是fork+exec，需要注意的是不必像fork一样复制父进程的地址空间。然后需要实现stride调度算法，需要注意调度算法所需状态的初始化和维护，可以选择通过堆或者维护单调队列来实现，不过测例简单也可以直接暴力搜索，还需注意处理溢出情况，避免调度进入死循环，同时优先级的维护还需实现set_priority系统调用。</li>
+<li>lab4是实现硬链接相关接口linkat和unlinkat，需要注意unlinkat对inode以及对应数据块的回收。</li>
+<li>lab5是实现死锁检测，需要注意维护检测算法所需的per-thread状态以及互斥量和信号量资源。</li>
+</ul>
+<p>额外题目还没实现，后续如果有时间再研究吧:)</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/22/%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/04/22/%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">一阶段总结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-22 23:59:02" itemprop="dateCreated datePublished" datetime="2024-04-22T23:59:02+00:00">2024-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-01 10:15:38" itemprop="dateModified" datetime="2024-11-01T10:15:38+00:00">2024-11-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>我先说一下感觉吧，我感觉rust好难啊，真的，^<em>^<br>之前是群里面发现了rcore这个文档，跟着看到第二章，发现不懂rust，然后就找教程学rust<br>后来发现了这个训练营，跟着这个训练营的课程进度，做rustlings练习题<br>一开始确实不难，到了迭代器，traits，结构体这里，差不多就看不懂了，属于是问了gpt也还是不懂的那种<br>后面的算法我倒是会，就是不会rust语法，然后问群友，虽然说不是每一题都问吧，也基本上是隔一两个就问<br>不管怎么说，通过群友们的解答和自己的努力，rustlings是做完了<br>总结：rust好难，^</em>^</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/22/2024%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93-%E5%88%98%E6%A2%93%E9%99%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/04/22/2024%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93-%E5%88%98%E6%A2%93%E9%99%86/" class="post-title-link" itemprop="url">2024开源操作系统训练营第一阶段总结-刘梓陆</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-22 23:51:00" itemprop="dateCreated datePublished" datetime="2024-04-22T23:51:00+00:00">2024-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-01 10:15:38" itemprop="dateModified" datetime="2024-11-01T10:15:38+00:00">2024-11-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/report/" itemprop="url" rel="index"><span itemprop="name">report</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="2024-开源操作系统训练营第一阶段总结-刘梓陆"><a href="#2024-开源操作系统训练营第一阶段总结-刘梓陆" class="headerlink" title="2024 开源操作系统训练营第一阶段总结-刘梓陆"></a>2024 开源操作系统训练营第一阶段总结-刘梓陆</h1><!-- !["语言神"](2024开源操作系统训练营第一阶段总结-刘Zero/Rust.png) -->
+
+<blockquote>
+<p>本来想在这里放一个图片的，但是看群里好像图片不太好处理，那就不放了</p>
+<p>不过在这里贴一个图片仓库链接：<a href="https://github.com/SAWARATSUKI/ServiceLogos" target="_blank" rel="noopener">ServiceLogos</a>，作者画得太好看，导致我当天看到就去印贴纸了……</p>
+</blockquote>
+<!--  -->
+
+<ul>
+<li><a href="#2024-开源操作系统训练营第一阶段总结-刘梓陆">2024 开源操作系统训练营第一阶段总结-刘梓陆</a><ul>
+<li><a href="#写在前面">写在前面</a></li>
+<li><a href="#欢迎交流-">欢迎交流;-）</a></li>
+<li><a href="#rust很好玩">Rust，很好玩</a><ul>
+<li><a href="#1--移动--和借用-options3rs-之中犯的错误">1. ♿ 移动 ♿ 和借用, options3.rs 之中犯的错误</a><ul>
+<li><a href="#11-讲点更复杂的怎么样">1.1 讲点更复杂的怎么样？</a></li>
+<li><a href="#12-temporary-lifetime什么时候会销毁">1.2 Temporary lifetime，什么时候会销毁？</a></li>
+</ul>
+</li>
+<li><a href="#2--生命周期和所有权----光的波粒二象性">2. 🌿 生命周期和所有权 🌿 - 光的波粒二象性?</a></li>
+</ul>
+</li>
+<li><a href="#写在最后">写在最后</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>我从稍微理解了我的专业之后就一直都很崇拜 Linus，这位堪称传奇的软件工程师在 1991 年 8 月 25 日——他 21 岁时就在网络上发布了 Linux 内核的源代码。现在是 2024 年 4 月 23 日，我也是 21 岁，追逐吗，梦想吗，我也想像他一样写出这样神奇的代码，33 年后的今天，我也要开始了，Linus。</p>
+<h2 id="欢迎交流-）"><a href="#欢迎交流-）" class="headerlink" title="欢迎交流;-）"></a>欢迎交流;-）</h2><p>在写这篇博客时，本人东北大学大三在读，前两年东学西学，Rust 就是之一，说实话，在本学期开始时，我实在找不到什么东西来做，准备先买一本《趣读 Linux 源码》来看，感谢我学弟<strong>翊嘉</strong>，是他给我推荐了这个操作系统训练营，这样直接上手操作系统的效果比看书要好太多了，真的十分感谢！</p>
+<p>我对 Rust 的理解还是比较少，future、unsafe 的内容更是知之甚少，所以大佬求带！看到我这篇总结报告之中有什么不足也请指出！</p>
+<ul>
+<li>github ID: <a href="https://github.com/destinyFvcker" target="_blank" rel="noopener">destinyFvcker</a></li>
+<li>邮箱：<a href="mailto:&#100;&#101;&#115;&#116;&#105;&#110;&#x79;&#102;&#x75;&#x6e;&#x6b;&#64;&#x31;&#x36;&#x33;&#46;&#99;&#111;&#109;">&#100;&#101;&#115;&#116;&#105;&#110;&#x79;&#102;&#x75;&#x6e;&#x6b;&#64;&#x31;&#x36;&#x33;&#46;&#99;&#111;&#109;</a></li>
+<li>微信号：wxid_r3se52q2d4pg22</li>
+</ul>
+<h2 id="Rust，很好玩"><a href="#Rust，很好玩" class="headerlink" title="Rust，很好玩"></a>Rust，很好玩</h2><p>这一阶段的练习基本上带领我加强了一遍 Rust 的语法，因为我接触 Rust 已经有小半年了，所以对我来说并不算很困难（如果要我 0 基础开始的话可能就会有点受不了了）。话虽如此， rustlings 确实给了我很多细节上的考验，我通过了它们，查缺补漏，学到了很多新东西（这里就当错题集一题一题记录了 XD）：</p>
+<blockquote>
+<p>2024_4_24, PS：因为这一个阶段基本上都是一些对 Rust 语法概念上的训练，所以我会着重讲一下对 Rust 一些重要语法概念的理解，本来写了挺多的，但是后面全部都删掉了，因为突然发现我好像也就是鹦鹉学舌，纯纯就是一些对官方文档还有论坛讨论的翻译，所以我会在讲到一个我觉得值得注意的点的时候把链接贴出来，然后提一下这个链接讲了什么，同学们自己去看会好的多</p>
+</blockquote>
+<blockquote>
+<p>2024_4_25, PS：感觉讲的有点乱了，实际上 Rust 之中的移动、生命周期、所有权的概念真的是耦合在一起的，在讲到一个部分的时候免不了要带一点其它两个部分。</p>
+</blockquote>
+<h3 id="1-♿-移动-♿-和借用-options3-rs-之中犯的错误"><a href="#1-♿-移动-♿-和借用-options3-rs-之中犯的错误" class="headerlink" title="1. ♿ 移动 ♿ 和借用, options3.rs 之中犯的错误"></a>1. ♿ 移动 ♿ 和借用, options3.rs 之中犯的错误</h3><p>说实话，移动和所有权这个语意在其他语言里面确实存在，但是一般作为规范存在，没有在 Rust 里面管的这么严，在 <code>options3.rs</code> 之中我就犯了这么一个错误：</p>
+<p>我在 main 函数之中这样写道：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> y: <span class="built_in">Option</span>&lt;Point&gt; = <span class="literal">Some</span>(Point &#123; x: <span class="number">100</span>, y: <span class="number">200</span> &#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">match</span> y &#123;</span><br><span class="line">    <span class="literal">Some</span>(p) =&gt; <span class="built_in">println!</span>(<span class="string">"Co-ordinates are &#123;&#125;,&#123;&#125; "</span>, p.x, p.y),</span><br><span class="line">    _ =&gt; <span class="built_in">panic!</span>(<span class="string">"no match!"</span>),</span><br><span class="line">&#125;</span><br><span class="line">y;</span><br></pre></td></tr></table></figure>
+
+<p>这样写会报错（<strong>value used here after partial move</strong>），因为在最后返回 <code>y</code> 之前 <code>Some(p)</code>就已经把外面 <code>y</code> 的所有权移动到 <code>p</code> 上了，此时 <code>y</code> 指向的是一个无效的内存空间。所以现在的解决方案就是把外面 <code>y</code> 借用到 <code>Some(p)</code>之中，一个关键字 <code>ref</code> 可以帮助我们做到这一点。这个关键字其实用法还是挺多的，一般用于<strong>模式匹配</strong>：</p>
+<p>下面是一段在《Rust 编程指南》之中的阐述（在第 10 章 Pattern 小节 Refrence Patterns 部分之中，如果你看的是英文版的 PDF 的话，在 P372 可以找到对这个问题的详细描述）：</p>
+<blockquote>
+<p>Rust 的模式匹配支持处理引用的两个特性：Ref 模式借用匹配值的一部分，&amp;模式匹配引用</p>
+</blockquote>
+<p>我个人感觉可以这样理解：Rust 之中的模式匹配就像是在匹配一个正则表达式，<code>&amp;</code>被理解位一个字面值字符，如果写<code>&amp;</code>的话，就会把&amp;引用的那个值“<strong>解离</strong>”出来，因为匹配了前面的一个&amp;，自然就是匹配后面的这个“值”了。</p>
+<p>呃，我又要引用《Rust 编程指南》之中的原话了（毕竟真的这本书很专业）</p>
+<blockquote>
+<p>In an expression, &amp; creates a reference.I a pattern, &amp; matches a refrence</p>
+<p>在一个表达式之中，&amp;创造一个引用，在模式之中，&amp;匹配一个引用</p>
+</blockquote>
+<p>当时我也是被震撼，确实有一种对称的美对吧？其实在 rustlings 对应的有关模式匹配训练之中你就可以发现这一点：你可以使用<code>()</code>来创建一个元组，可以使用<code>{}</code>来创建一个结构体，当然就可以使用对应包含<code>()</code>和<code>{}</code>的模式匹配来把其中对应的字段解析出来，_<strong>这是一个互逆的过程</strong>_，我觉得这一点需要好好注意一下，基本上就是<strong>模式匹配直观意义上</strong>的精髓所在了。</p>
+<p>但是 <code>ref</code>更像是一个正则表达式之中的元字符，用于描述匹配规则：<strong>我只想要借用匹配的值，而不是移动它们</strong>，如果想要借出可变引用的话就要使用<code>ref mut</code>。所以这里这样改改，加一个<code>ref</code>就成功了：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">match</span> y &#123;</span><br><span class="line">    <span class="literal">Some</span>(<span class="keyword">ref</span> p) =&gt; <span class="built_in">println!</span>(<span class="string">"Co-ordinates are &#123;&#125;,&#123;&#125; "</span>, p.x, p.y),</span><br><span class="line">    _ =&gt; <span class="built_in">panic!</span>(<span class="string">"no match!"</span>),</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当然，如果匹配的数据实现了<code>Cope</code>trait 的话，你怎么样搞都行，但是在处理有所有权的对象的时候就必须小心处理了，这 Rust 真给我好好上了一课。</p>
+<h4 id="1-1-讲点更复杂的怎么样？"><a href="#1-1-讲点更复杂的怎么样？" class="headerlink" title="1.1 讲点更复杂的怎么样？"></a>1.1 讲点更复杂的怎么样？</h4><p>在下一部分我想要讲讲我对生命周期和所有权的理解，所以在这里我想先就着这个例子好好借题发挥，先铺垫一下。</p>
+<p>实际上<code>options3.rs</code>还能出得更加复杂一点，这种情况就要把<code>ref</code>和<code>&amp;</code>同时用上才能解决。在<code>options3.rs</code>之中，该结构体之中的两个成员都是实现了<code>Copy</code>trait 的，那么如果有具有所有权的成员的话，应该如何处理呢？</p>
+<p>就像是下面这种情况（实际上你可以在《Rust 程序设计》的 P374 找到它）：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Engine</span></span> &#123;</span><br><span class="line">    version: <span class="built_in">String</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Car</span></span> &#123;</span><br><span class="line">    engine: Engine,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> borrowed_car: <span class="built_in">Option</span>&lt;&amp;Car&gt; = <span class="literal">Some</span>(&amp;Car &#123;</span><br><span class="line">        engine: Engine &#123;</span><br><span class="line">            version: <span class="built_in">String</span>::from(<span class="string">"混合动力"</span>),</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">match</span> borrowed_car &#123;</span><br><span class="line">        <span class="literal">Some</span>(&amp;Car &#123; engine &#125;) =&gt; &#123;</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">"I got the engine!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="literal">None</span> =&gt; &#123;</span><br><span class="line">            <span class="built_in">println!</span>(<span class="string">"noting here"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你像上面这样写的话就好像是<strong>把一辆借来的车里头的引擎偷出来了</strong>。Rust 会降下它的神罚，引导我们做出正确的选择：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">error[E0507]: cannot move out of &#96;borrowed_car.engine&#96; as enum variant &#96;Some&#96; which is behind a shared reference</span><br><span class="line">  --&gt; src&#x2F;main.rs:16:11</span><br><span class="line">   |</span><br><span class="line">16 |     match borrowed_car &#123;</span><br><span class="line">   |           ^^^^^^^^^^^^</span><br><span class="line">17 |         Some(&amp;Car &#123; engine &#125;) &#x3D;&gt; &#123;</span><br><span class="line">   |                     ------</span><br><span class="line">   |                     |</span><br><span class="line">   |                     data moved here</span><br><span class="line">   |                     move occurs because &#96;engine&#96; has type &#96;Engine&#96;, which does not implement the &#96;Copy&#96; trait</span><br><span class="line">   |</span><br><span class="line">help: consider borrowing the pattern binding</span><br><span class="line">   |</span><br><span class="line">17 |         Some(&amp;Car &#123; ref engine &#125;) &#x3D;&gt; &#123;</span><br><span class="line">   |                     +++</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里忍不住想要夸一下，Rust 的错误输出真的是太好了！</p>
+</blockquote>
+<p>所以既然车是借的，引擎也应该是借的对不对？这里使用 ref 来把引擎借出来就没事了。</p>
+<h4 id="1-2-Temporary-lifetime，什么时候会销毁？"><a href="#1-2-Temporary-lifetime，什么时候会销毁？" class="headerlink" title="1.2 Temporary lifetime，什么时候会销毁？"></a>1.2 Temporary lifetime，什么时候会销毁？</h4><p>实际上假如你修正了上面这个<code>ref</code>的问题仍然会报错，😭 了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">error[E0716]: temporary value dropped while borrowed</span><br><span class="line">  --&gt; src&#x2F;main.rs:10:44</span><br><span class="line">   |</span><br><span class="line">10 |       let borrowed_car: Option&lt;&amp;Car&gt; &#x3D; Some(&amp;Car &#123;</span><br><span class="line">   |  ____________________________________________^</span><br><span class="line">11 | |         engine: Engine &#123;</span><br><span class="line">12 | |             version: String::from(&quot;混合动力&quot;),</span><br><span class="line">13 | |         &#125;,</span><br><span class="line">14 | |     &#125;);</span><br><span class="line">   | |     ^ - temporary value is freed at the end of this statement</span><br><span class="line">   | |_____|</span><br><span class="line">   |       creates a temporary value which is freed while still in use</span><br><span class="line">15 |</span><br><span class="line">16 |       match borrowed_car &#123;</span><br><span class="line">   |             ------------ borrow later used here</span><br><span class="line">   |</span><br><span class="line">help: consider using a &#96;let&#96; binding to create a longer lived value</span><br><span class="line">   |</span><br><span class="line">10 ~     let binding &#x3D; Car &#123;</span><br><span class="line">11 +         engine: Engine &#123;</span><br><span class="line">12 ~             version: String::from(&quot;混合动力&quot;),</span><br><span class="line">13 +         &#125;,</span><br><span class="line">14 +     &#125;;</span><br><span class="line">15 ~     let borrowed_car: Option&lt;&amp;Car&gt; &#x3D; Some(&amp;binding);</span><br><span class="line">   |</span><br></pre></td></tr></table></figure>
+
+<p>这里涉及到一个比较微观的问题：Rust <strong>在背后为我们做了的事</strong>。实际上很多时候我们创建的变量的生命周期就只是一个局限于语句（statement）的 temporary lifetime，Rust 为我们做了 lifetime extention 之后才能在 block 之中使用。</p>
+<p>在论述这个问题之前，先列一下参考文献吧：</p>
+<ul>
+<li>1<a href="https://github.com/rust-lang/lang-team/blob/master/design-meeting-minutes/2023-03-15-temporary-lifetimes.md" target="_blank" rel="noopener">《Temporary lifetimes》</a><ul>
+<li>强烈建议先看这一篇，这是 Rust 开发小组的一次会议纪要，讲了现在 Rust 之中 Temporary lifetimes 的一些情况，在 Rust2024 之中要改进哪一部分，讲的比较通俗，例子也好很多</li>
+</ul>
+</li>
+<li>2<a href="https://doc.rust-lang.org/reference/expressions.html#place-expressions-and-value-expressions" target="_blank" rel="noopener">《Place Expressions and value Expressions》</a><ul>
+<li>这篇 RustRefrence 文档之中讲到了 Rust 之中表达式的分类（类似于 C++之中的左值和右值）</li>
+</ul>
+</li>
+<li>3<a href="https://doc.rust-lang.org/reference/destructors.html#temporary-scopes" target="_blank" rel="noopener">《Temporary scopes》</a><ul>
+<li>这篇文档之中谈到了我之前没有听说过的作用域 Temporary scope，我的理解就是立即值（右值）的一个小作用域</li>
+</ul>
+</li>
+<li>4<a href="https://doc.rust-lang.org/reference/destructors.html#temporary-lifetime-extension" target="_blank" rel="noopener">《Temporary lifetime extension》</a><ul>
+<li>这篇文档之中讲到了 Temporary 作用域的提升，也就是为什么说一个 Temporary scopes 在进行赋值等操作之后可以将本来很小的作用域延展到和被赋予值的变量作用域相同的情况</li>
+</ul>
+</li>
+</ul>
+<p><strong>上面这些概念之间的关系就是：</strong> The <strong><em>temporary scope</em></strong> of an expression is the scope that is used for the <strong><em>temporary variable</em></strong> that holds the result of that expression when used in a <strong><em>place context</em></strong>。（摘自文献 3）</p>
+<p>注意这里的三个关键词：<strong>temporary scope</strong>、<strong>temporary variable</strong> 和 <strong>place context</strong></p>
+<p>处于位置上下文（place context）的表达式就是位置表达式，它代表了一个内存位置（<a href="https://doc.rust-lang.org/reference/paths.html" target="_blank" rel="noopener">Paths</a>）。这些表达式是局部变量、静态变量、解引用（<code>*expr</code>）表达式、数组索引表达式（<code>expr[expr]</code>）、字段引用（<code>expr.f</code>）和括号内的位置表达式（<strong>parenthesized place expressions</strong>）</p>
+<p>突然感觉这里举一个例子会比较好：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> t = &amp;foo();</span><br></pre></td></tr></table></figure>
+
+<p>实际上是：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> tmp;</span><br><span class="line"><span class="keyword">let</span> t = &#123; tmp = foo(); &amp;tmp &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>也就是说，<code>&amp;foo()</code>是一个表达式，现在它处于一个位置上下文之中（<code>&amp;</code>需要一个位置），所以现在需要一个 temporary variable（简称 temporary）来存储这个<code>foo()</code>表达式的结果，也就是上面的<code>tmp</code>，这个<code>tmp</code>的生命周期就是 temporary scope。</p>
+<p>而且在这里还做了一个 lifetime-extension：如果没有 <code>let</code> 的话，实际上 temporary 在语句的末尾（遇到<code>;</code>）就会被销毁：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;foo();</span><br></pre></td></tr></table></figure>
+
+<p>实际上是</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">let</span> tmp;</span><br><span class="line">  tmp = &amp;foo();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个立即失效的局部变量显然不符合用户的意图。因此，我们延长 temporary 的生命周期，使其在最内层块的末尾被删除（the end of the innermost block）。</p>
+<p>实际上就是把原来局限于语句的生命周期提升了一个一个层次，提升到块了。</p>
+<p>怎么样，是不是原来好像很理所当然的一段代码都变得不那么简单了？更多有关这部分概念的解释请参考<strong>文献 1</strong>，我在这里就不赘述了。</p>
+<hr>
+<p>回到在本小节一开始提出的问题，为啥会报错？其实看报错信息就知道了，按照我们上面的思路来思考：</p>
+<p>首先，里面这个表达式处于一个位置上下文（place context）之中，因为<code>&amp;</code>期待一个位置，所以得有一个 temporary 来保存这个位置啊：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">let</span> tmp;</span><br><span class="line">  tmp = Car &#123;</span><br><span class="line">        engine: Engine &#123;</span><br><span class="line">            version: <span class="built_in">String</span>::from(<span class="string">"混合动力"</span>),</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &amp;tmp</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是很不幸的是，这个 temporary 首先作用于 <code>Some</code>，而不是 <code>let</code>，所以不会进行 lifetime-extension，在遇到<code>;</code>之后，temporary 就被 drop 掉了。</p>
+<p>出现了，悬垂引用！Rust 就 panic 了。（本节完）</p>
+<h3 id="2-🌿-生命周期和所有权-🌿-光的波粒二象性"><a href="#2-🌿-生命周期和所有权-🌿-光的波粒二象性" class="headerlink" title="2. 🌿 生命周期和所有权 🌿 - 光的波粒二象性?"></a>2. 🌿 生命周期和所有权 🌿 - 光的波粒二象性?</h3><p>“光的波粒二象性”这个比喻是油管的一个博主 <a href="https://www.youtube.com/watch?v=gRAVZv7V91Q&t=663s" target="_blank" rel="noopener">ledoo</a> 提出来的。</p>
+<p>我觉得讲的真的很不错，所以在这里想提一提。</p>
+<p>大概就是说，我们讲到生命周期（lifetime）就是总是从代码层面去分析对不对？去看是不是你变量的第一次声明和最后一次使用跨越了一个 block，但是实际上 Rust 做这个生命周期是为了检查内存的有效性的，你还可以从变量指向内存的位置和保证内存的有效性这两个角度来理解生命周期。（Thinking about lifetime as regions of memory, what can they——the reference point to?）</p>
+<p>这就好像是光的波粒二象性一样，有的时候从这个角度去看比较好理解，有的时候从另外一个角度去看则更佳。 <strong>我个人觉得用这种角度去理解生命周期标注是最好的。</strong></p>
+<p>就拿 <code>lifetimes1.rs</code> 为例吧：</p>
+<blockquote>
+<p>实际上他视频里面就有讲这个很经典的生命周期标注问题</p>
+</blockquote>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">longest</span></span>(x: &amp;<span class="built_in">str</span>, y: &amp;<span class="built_in">str</span>) -&gt; &amp;<span class="built_in">str</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x.len() &gt; y.len() &#123;</span><br><span class="line">        x</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        y</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="keyword">let</span> string1 = <span class="built_in">String</span>::from(<span class="string">"abcd"</span>);</span><br><span class="line">    <span class="keyword">let</span> string2 = <span class="string">"xyz"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> result = longest(string1.as_str(), string2);</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"The longest string is '&#123;&#125;'"</span>, result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这道题的正确答案应该是这样：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">longest</span></span>&lt;<span class="symbol">'a</span>&gt;(x: &amp;<span class="symbol">'a</span> <span class="built_in">str</span>, y: &amp;<span class="symbol">'a</span> <span class="built_in">str</span>) -&gt; &amp;<span class="symbol">'a</span> <span class="built_in">str</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x.len() &gt; y.len() &#123;</span><br><span class="line">        x</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        y</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>加上生命周期标注，生命标注在我初学 Rust 的时候把我虐的死去活来的，你比如说这里的<code>&#39;a</code>，为什么大家都是标<code>&#39;a</code>？是不是意味着所有传入的 reference 的生命周期都要是相同的？什么？返回值的生命周期也是<code>&#39;a</code>？三个都要相同？啊？这限制也太严格了把？</p>
+<p>当然，如果你读过像是 Rust 圣经的文档话，文档里面就会告诉你：实际上呢，这里的意思是以生命周期最小的那个 Reference 为准，不过呢……总感觉怪怪的。</p>
+<p>如果你使用指向有效内存的角度来进行分析的话，我感觉就会比较好一点：</p>
+<p>x 指向一块内存 <code>memory_x</code>，y 也指向一块内存 <code>memory_y</code>，这两块内存当然可以是不一样的，返回值也指向一块内存，那么在这里<code>&#39;a</code>的作用就是说，我要统一这两块内存，返回值指向<code>memory_x</code>“和”<code>memory_y</code>。这里“和”打双引号，因为现实不可能同时指向两部分嘛。</p>
+<p>所以 Rust 怎么检查这个返回值是否有效？答案是在这个返回值最后一次使用之前这<strong>两块内存<code>memory_x</code>和<code>memory_y</code>都要有效</strong>。</p>
+<p>如果使用生命周期约束的话，差不多也是这个意思，比如说<code>&#39;a: &#39;b</code>比较官方的说法就是<code>&#39;a</code>的生命周期的范围必须包含或等于<code>&#39;b</code>的生命周期的范围。</p>
+<p>假如我们使用“内存说”的话，就刚刚好反过来，<code>&#39;b</code>指向的内存包含了<code>&#39;a</code>指向的内存，所以<code>&#39;b</code>有效的时候<code>&#39;a</code>也一定要有效，所以你可以这样读这个限界：<code>&#39;a</code> in <code>&#39;b</code>。</p>
+<p>嗯，大概就是这样。（本节完）</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>首先，感谢你看到这里！</p>
+<p>本来还想写一些 unsafe 还有 cargo 的内容的，但是没有时间了！！！！！唉，期中了，我还有 ddl 要赶呢，在这篇博客之中写的生命周期、所有权、移动的概念（话说好像都在讲生命周期）我认为就是 Rust 的核心了，所以对于第一部分的 Rust 编程学习，内容分量应该也刚刚好吧？（小小的虚荣一下，把我在第一部分之中讲的那个车和引擎的问题出成题感觉也 ٩(•̤̀ᵕ•̤́๑)ᵒᵏᵎᵎᵎᵎ？）</p>
+<p>所以我准备移动一下，在第二阶段的报告里面把 unsafe、cargo 连着操作系统讲一下，如果你觉得从我的这篇报告学到了什么东西的话，那就太好了！</p>
+<blockquote>
+<p>2024 年 04 月 25 日 21:14:31</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/22/2024%E6%98%A5%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E6%80%BB%E7%BB%93-%E6%96%BD%E6%81%BA%E6%B2%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/04/22/2024%E6%98%A5%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E6%80%BB%E7%BB%93-%E6%96%BD%E6%81%BA%E6%B2%A7/" class="post-title-link" itemprop="url">2024春季开源操作系统训练营总结-施恺沧</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-22 23:38:21" itemprop="dateCreated datePublished" datetime="2024-04-22T23:38:21+00:00">2024-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-01 10:15:38" itemprop="dateModified" datetime="2024-11-01T10:15:38+00:00">2024-11-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/catogory/" itemprop="url" rel="index"><span itemprop="name"><catogory></span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="初始rcore"><a href="#初始rcore" class="headerlink" title="初始rcore"></a>初始rcore</h1><p>第一次知道rcore来源于一篇知乎的帖子，当时沉迷于操作系统的学习，希望能写出一个自己的操作系统。但当时网络上更多的是对xv6的赞赏，rcore的仅仅是一句简单的提及。受限于当时初学计算机，只知语言C，不识Rust，不希望投入太多精力到语言的学习，因此并未细探rcore究竟。（当然，三分钟热度的我最后也没写完一个操作系统，希望这次能够完善地学完！）</p>
+<p>直到去年了解到这个开源操作系统训练营，加上自学了rust的基础语法，对其很有兴趣。可惜秋冬季已经结营，加上网站上模糊的教学视频实在难以学习，便又戛然而止。直至今年四月初至，又闻开营之事（别问，问就是大数据推送），喜从心中来，急急忙忙地就上了船。</p>
+<h1 id="第一阶段总结"><a href="#第一阶段总结" class="headerlink" title="第一阶段总结"></a>第一阶段总结</h1><p>第一阶段主要是熟悉rust语法，前三十道题进展迅速，仅涉及简单语法；中间几十道题中，所有权和生命周期单列出来较为简单，但是复杂场景中的所有权问题令人头疼；最后几道算法题，除去算法本身的难度，rust对于所有权和借用的限制才是最大的难点，以至于最后纯粹是与编译器斗智斗勇，几乎快忘了实现逻辑和复杂度。</p>
+<p>除此之外，有多道题目在完成过程中总是不解其意，仅仅是让其通过检测。知道提交通过之后，看到群友们的讨论才恍然大悟，但又懒于修改，还是默默学习的新的内容去吧。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/22/rCore%E4%B8%80%E9%98%B6%E6%AE%B5%E7%AC%94%E8%AE%B0-by-GPH-Nanyang-Technological-University/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/04/22/rCore%E4%B8%80%E9%98%B6%E6%AE%B5%E7%AC%94%E8%AE%B0-by-GPH-Nanyang-Technological-University/" class="post-title-link" itemprop="url"><rCore一阶段笔记 -by GPH -Nanyang Technological University></a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-22 23:07:58" itemprop="dateCreated datePublished" datetime="2024-04-22T23:07:58+00:00">2024-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-01 10:15:38" itemprop="dateModified" datetime="2024-11-01T10:15:38+00:00">2024-11-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h2><p>本人就读于新加坡南洋理工大学，参加这个夏令营的目的是为了弥补本科时候的遗憾。在本科期间，听说了AI多么高大上，挣钱多么多，于是把目标放在了AI方向，任何的课程和科研都是围绕着AI方向。但是后面大四发现实在是卷论文卷不动了，而且其实干的很多事情都是调参，找一组好的参数发论文，这并不是我想要的生活，也不是想干的方向。于是我开始想试试开发，因为传统开发上面我毫无经验和优势，于是便去学习小众的区块链开发，发现了Rust这门宝藏语言。顺利的学习这门语言，好好读书背八股找到了大厂的工作（今年入职），但是其实操作系统等底层的知识，在本科上课的时候都是糊弄过去的，所以一直有这个遗憾。借着这个夏令营的机会，我的目标是一阶段巩固一下Rust细节知识，为后面转向区块链开发做铺垫（参加过Solana链相关的黑客松），第二个是真正的非纸上谈兵地去用喜欢的Rust语言做一下操作系统相关的开发，希望可以坚持到最后。</p>
+<h2 id="一阶段学习感悟——对Rust的一些感想"><a href="#一阶段学习感悟——对Rust的一些感想" class="headerlink" title="一阶段学习感悟——对Rust的一些感想"></a>一阶段学习感悟——对Rust的一些感想</h2><p>Rust 是一种安全的系统编程语言，它为程序员提供了实现安全的途径，而无需担心所有的实现细节。所以这里的动机是，基本上C++是不安全的。这也是 Rust 出现的原因。<br>这里的安全性指的是，如果你用Rust编写了一个程序，并且它满足了某些条件，那么当你将该程序编译成汇编程序时，就可以保证汇编程序不会出错。编译器和类型系统保证了这一点。与此同时，它还实现了控制，因为它支持编程中所需的所有底层功能，例如操作系统的构建，目前Linux和Windows中的系统内核中很多部分都用Rust进行了重构。尤其是C和C++在编写并发程序的时候，无法自动检测到内存的不安全性，而Rust的所有权和生命周期抓住了并发的本质，其本质上关于安全的共享资源。<br>下面讨论一下系统编程里面的内存模型。我认为一个编程语言，尤其是系统编程语言，或者说比较低级别的编程语言中间最重要的实际上有两件事儿，一个就是它的内存模型，或者说你的变量在内存中是如何交互的和如何表示的。另一个就是多线程的事情，就是多个线程如何操作这些内存。<br>首先在系统编程领域唯三的编程语言，就是C，C++和Rust。因为Rust它实际上是有很多比较新的理念，可以视为它从C++中间去抽取了很多比较精华的部分，并且它又长出来自己独有的一些东西。<br>因为C++里面的特性非常多，而且有很多很复杂很融坠，很多还是由于历史原因造成的。因为 C++非常强调兼容性，所以他以前的一些设计的问题，它是没有办法在未来改变的，它只能把它保留或者是把它遮蔽起来。就像你有堆垃圾，你没有办法倒到外面，你只能拿被子先盖起来，然后在这个垃圾上面去建立一些新的东西，所以很多人都觉得C++不如C语言使用起来那样舒服。那么从Rust角度来讲的话，它就没有这个历史负担，它出现的比较晚，所以他从不管从C还是从C++，还是从 Python等等其他的语言中去抽取了很多好的东西集成起来。从整体上来看的话，共性化的部分肯定是各个语言都比较重要的部分，个性化的部分的话，Rust的部分的好处多于坏，它的坏处主要是它的带来的额外的编程和编译的复杂性。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/04/14/2024%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E5%91%A8%E5%B5%A9%E6%96%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/04/14/2024%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E5%91%A8%E5%B5%A9%E6%96%87/" class="post-title-link" itemprop="url">2024开源操作系统训练营第一阶段总结报告-周嵩文</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-04-14 11:42:43" itemprop="dateCreated datePublished" datetime="2024-04-14T11:42:43+00:00">2024-04-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-01 10:15:38" itemprop="dateModified" datetime="2024-11-01T10:15:38+00:00">2024-11-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/report/" itemprop="url" rel="index"><span itemprop="name">report</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <a id="more"></a>
+
+<h2 id="给第一周做一个总结"><a href="#给第一周做一个总结" class="headerlink" title="给第一周做一个总结"></a>给第一周做一个总结</h2><ul>
+<li>参加这个lab的起初目的有两个：一是有可能会有实习机会，但是现在看到这么多大佬估计也挺难了哈，二是想考研408，加深自己对于操作系统的理解。另外可以丰富自己的项目知识的积累，过去一个星期了，发现自己的这个选择真是无比的正确，在学校待的两年发现什么实操都不会，学到了很多工具的使用（非常感激群里的大佬们的帮助），并且在学习的过程中也对rust产生了浓厚的兴趣，非常想去学习。</li>
+<li>第一周在学习rust的语法，主要是跟着B站的一个up主（软件工艺师）在学习，讲解的非常的好，而且没有废话，很细节，结合rust中文圣经补充一些知识。</li>
+<li>不过没学多久就准备蓝桥杯了，刚好学到生命周期那个部分，在第一周做rustlings写到48题，刷到现在感到收获很大，深刻体会到要学会一门语言是要多加练习的。</li>
+<li>接触到rust的语言之后，我对它产生了浓厚的兴趣，虽然这门语言很难，但是也很有趣，思想也很先进，不同于初学python时不用敲代码就可以掌握，学习rust经常一个语法要写好几遍才堪堪掌握。</li>
+<li>比较开心的是，学完了trait和生命周期，这两个点大家都说难，但是我认为比较好理解，看来我果然还是很有天赋的吧哈哈哈哈哈哈哈哈！！！</li>
+<li>好吧，这也没什么要记录的了，群里很多大佬在第一二天就已经将rustlings写完，而我连github还没整明白，在第二周补补知识，把rustlings写完（话说这个博客提交又要研究一个晚上了wuwuwu）。</li>
+<li>参考的rust语言圣经:<a href="https://course.rs/basic/compound-type/string-slice.html" target="_blank" rel="noopener">https://course.rs/basic/compound-type/string-slice.html</a></li>
+<li>讲解的超棒的B站视频：【Rust编程语言入门教程（Rust语言/Rust权威指南配套）【已完结】-哔哩哔哩】 <a href="https://b23.tv/AaXsgZd" target="_blank" rel="noopener">https://b23.tv/AaXsgZd</a></li>
+</ul>
+<h2 id="第二周"><a href="#第二周" class="headerlink" title="第二周"></a>第二周</h2><ul>
+<li>这一周一开始把rust剩下的智能指针，多线程，闭包等全部学完了，但是直到开始写剩下的rustlings时，才发现实际写起来困难重重，经过反复的查阅官方文档以及GPT的帮助之下，才弄懂了接下来的题。</li>
+<li>但是到了algorithm的十道题，每啃一道都会花费不少的时间，需要反复检查所有权和trait的使用，</li>
+<li>建议还是反复多练习才能更好的掌握，这次新增的这十道算法题也确实帮助我更好的打好了基础。</li>
+<li>最后，非常感谢能有机会参加这次活动，希望在第二阶段可以有更多收获，同时也为社区回馈更多。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/blog/page/20/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/blog/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/42/">42</a><a class="extend next" rel="next" href="/blog/page/22/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+        </div>
+        
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rcore-os Group</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/muse.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
